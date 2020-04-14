@@ -1,0 +1,15 @@
+C:\Users\Iman\source\repos\Text Editor 1.1\Text Editor 1.1\bin\Debug\Text Editor 1.1.exe.config
+C:\Users\Iman\source\repos\Text Editor 1.1\Text Editor 1.1\bin\Debug\Text Editor 1.1.exe
+C:\Users\Iman\source\repos\Text Editor 1.1\Text Editor 1.1\bin\Debug\Text Editor 1.1.pdb
+C:\Users\Iman\source\repos\Text Editor 1.1\Text Editor 1.1\obj\Debug\Text Editor 1.1.csprojAssemblyReference.cache
+C:\Users\Iman\source\repos\Text Editor 1.1\Text Editor 1.1\obj\Debug\App.g.cs
+C:\Users\Iman\source\repos\Text Editor 1.1\Text Editor 1.1\obj\Debug\Text Editor 1.1_MarkupCompile.cache
+C:\Users\Iman\source\repos\Text Editor 1.1\Text Editor 1.1\obj\Debug\Text Editor 1.1_MarkupCompile.lref
+C:\Users\Iman\source\repos\Text Editor 1.1\Text Editor 1.1\obj\Debug\Text Editor 1.1.g.resources
+C:\Users\Iman\source\repos\Text Editor 1.1\Text Editor 1.1\obj\Debug\Text_Editor_1._1.Properties.Resources.resources
+C:\Users\Iman\source\repos\Text Editor 1.1\Text Editor 1.1\obj\Debug\Text Editor 1.1.csproj.GenerateResource.cache
+C:\Users\Iman\source\repos\Text Editor 1.1\Text Editor 1.1\obj\Debug\Text Editor 1.1.exe
+C:\Users\Iman\source\repos\Text Editor 1.1\Text Editor 1.1\obj\Debug\Text Editor 1.1.pdb
+C:\Users\Iman\source\repos\Text Editor 1.1\Text Editor 1.1\obj\Debug\View\MainWindow.g.cs
+C:\Users\Iman\source\repos\Text Editor 1.1\Text Editor 1.1\obj\Debug\View\MainWindow.baml
+C:\Users\Iman\source\repos\Text Editor 1.1\Text Editor 1.1\obj\Debug\App.baml

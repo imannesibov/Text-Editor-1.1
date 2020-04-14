@@ -1,0 +1,147 @@
+﻿<Window x:Class="Text_Editor_1._1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Text_Editor_1._1"
+        mc:Ignorable="d"
+        Title="Document - Text Editor 1.1" Height="450" Width="1100" Name="mainWindow">
+   
+    <Window.Resources>
+        <Image x:Key="enable" Source="/Images/speellcheck-e.png"  Height="25" Width="35"/>
+        <Image x:Key="disable" Source="/Images/speellcheck-d.png" Height="25" Width="35"/>
+    </Window.Resources>
+
+    <Grid Background="#393e41">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="46"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <WrapPanel VerticalAlignment="Top" Background="#ccc7b9">
+
+            <!--Save-->
+            <Button  ToolTip="Save" Click="savebtn_Click" Name="savebtn" Style="{StaticResource RoundButtonTemplate}" Height="30" Width="30" HorizontalAlignment="Left">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/save.png"/>
+                </Button.Background>
+            </Button>
+
+            <!--Font Family-->
+            <ComboBox  HorizontalAlignment="Left"  Margin="10"  ScrollViewer.VerticalScrollBarVisibility="Hidden" FontFamily="Comic Sans MS" ToolTip="Font"  Name="fontbox" Width="150"   BorderThickness="0" SelectionChanged="fontbox_SelectionChanged"   />
+
+            <!--Font Size-->
+            <ComboBox HorizontalAlignment="Left" Margin="10" ScrollViewer.VerticalScrollBarVisibility="Hidden" ToolTip="Font Size" Name="fonstsize" Width="40"    BorderThickness="0"    SelectionChanged="fonstsize_SelectionChanged" />
+
+            <!--Undo-->
+            <Button ToolTip="Undo" Click="undobtn_Click"  Name="undobtn" Style="{StaticResource RoundButtonTemplate}" Height="25" Width="25" HorizontalAlignment="Left">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/undo.png"/>
+                </Button.Background>
+            </Button>
+
+            <!--Redo-->
+            <Button  ToolTip="Redo" Click="redobtn_Click" Name="redobtn" Style="{StaticResource RoundButtonTemplate}" Height="25" Width="25" HorizontalAlignment="Left">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/redo.png"/>
+                </Button.Background>
+            </Button>
+
+            <!--Cut-->
+            <Button ToolTip="Cut" Click="cutbtnbtn_Click" Margin="10" Name="cutbtnbtn" Style="{StaticResource RoundButtonTemplate}" Height="25" Width="25" HorizontalAlignment="Left">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/cut.png"/>
+                </Button.Background>
+            </Button>
+
+            <!--Copy-->
+            <Button ToolTip="Copy" Click="copybtn_Click"  Margin="10" Name="copybtn" Style="{StaticResource RoundButtonTemplate}" Height="25" Width="25" HorizontalAlignment="Left">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/copy.png"/>
+                </Button.Background>
+            </Button>
+
+            <!--Paste-->
+            <Button ToolTip="Paste" Click="pastebtn_Click" Margin="10" Name="pastebtn" Style="{StaticResource RoundButtonTemplate}" Height="25" Width="25" HorizontalAlignment="Left">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/paste.png"/>
+                </Button.Background>
+            </Button>
+
+            <!--Select All-->
+            <Button ToolTip="Select All" Click="selectallbtn_Click" Margin="10" Name="selectallbtn" Style="{StaticResource RoundButtonTemplate}" Height="25" Width="25" HorizontalAlignment="Left">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/selectall.png"/>
+                </Button.Background>
+            </Button>
+
+            <!--Color Picker-->
+            <Button ToolTip="Color Picker" Click="colorpickerbtn_Click" Margin="10" Name="colorpickerbtn" Style="{StaticResource RoundButtonTemplate}" Height="25" Width="35" HorizontalAlignment="Left">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/colorpicker.png"/>
+                </Button.Background>
+            </Button>
+            <!--AUTO-SAVE CHECKBOX-->
+            <CheckBox  Name="auto_save"  VerticalAlignment="Center" ToolTip="Auto-save" Width="100" BorderThickness="2" BorderBrush="Aqua" Content="Autosave"/>
+            <!--Spell-Check-->
+            <Button Click="speellcheckbtn_Click" ToolTip="Spell-Check"  Margin="10" Name="speellcheckbtn" Style="{StaticResource RoundButtonTemplate}" Height="25" Width="35" HorizontalAlignment="Left">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/speellcheck-e.png"/>
+                </Button.Background>
+            </Button>
+
+            <!--Calendar -->
+            <Button Click="calendarbtn_Click" ToolTip="Calendar" Margin="10" Name="calendarbtn" Style="{StaticResource RoundButtonTemplate}" Height="25" Width="25" HorizontalAlignment="Left">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/calendar.png"/>
+                </Button.Background>
+            </Button>
+
+            <!--Left Alignment -->
+            <Button Click="leftbtn_Click" ToolTip="Left Alignment"  Name="leftbtn" Style="{StaticResource RoundButtonTemplate}" Height="25" Width="25" HorizontalAlignment="Left">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/left.png"/>
+                </Button.Background>
+            </Button>
+
+            <!--Center Alignment -->
+            <Button Click="centerbtn_Click" ToolTip="Center Alignment" Name="centerbtn" Style="{StaticResource RoundButtonTemplate}" Height="25" Width="25" HorizontalAlignment="Left">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/center.png"/>
+                </Button.Background>
+            </Button>
+
+            <!--Right Alignment-->
+            <Button Click="rightbtn_Click" ToolTip="Right Alignment" Name="rightbtn" Style="{StaticResource RoundButtonTemplate}" Height="25" Width="25" HorizontalAlignment="Left">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/right.png"/>
+                </Button.Background>
+            </Button>
+
+            <!--File Path-->
+            <TextBlock Name="fileNameTxtBox"  Width="150" Background="White" Height="25" HorizontalAlignment="Left"  Margin="10"/>
+
+
+            <!--Load-->
+            <Button Click="loadbtn_Click" ToolTip="Load" Name="loadbtn" Style="{StaticResource RoundButtonTemplate}" Height="30" Width="35" HorizontalAlignment="Left">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/load.png"/>
+                </Button.Background>
+            </Button>
+        </WrapPanel>
+
+
+        <RichTextBox Padding="10" FocusManager.FocusedElement="{Binding RelativeSource={RelativeSource Self}}" TextChanged="textarea_TextChanged" BorderThickness="1" SpellCheck.IsEnabled="True" BorderBrush="Black" Background="#f5f2eb" Name="textarea" Grid.Row="1" Margin="15,19,15,11">
+
+        </RichTextBox>
+
+
+        <DockPanel Background="#ccc7b9" Grid.Row="2" VerticalAlignment="Bottom">
+            <Label Name="wordcountlbl" FontSize="15"  VerticalContentAlignment="Top"  Content="Words : 0" Margin="0,30,0,0"/>
+        </DockPanel>
+
+    </Grid>
+
+</Window>
